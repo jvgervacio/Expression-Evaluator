@@ -17,7 +17,7 @@ This project is a simple expression evaluator, it was made for a college assignm
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Evaluate expressions with +, -, *, /, ^, % operators;\
+:heavy_check_mark: Evaluate expressions with +, -, *, /, ^ operators;\
 :heavy_check_mark: Evaluate expressions with parenthesis;\
 :heavy_check_mark: Evaluate expressions with variables;\
 
