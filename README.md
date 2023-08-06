@@ -13,7 +13,7 @@
 
 ## :dart: About ##
 
-This project is a simple expression evaluator, it was made for a college assignment.
+This project is a simple expression evaluator, it was made for a college assignment. Using Stack linked list implementation.
 
 ## :sparkles: Features ##
 
