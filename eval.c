@@ -46,8 +46,15 @@ Expression createExpression(char *expression){
 Stack infixToPosfix(char *expression){                          
     Stack stack = createStack();                                                                    // create a new stack
     Stack postfix = createStack();                                                                  // create a new stack to hold the postfix expression
-    int i = 0;                          
-
+    int i = 0;
+    // expression = 2*x+1  
+    // i         expresion[i]       stack           postfix                        
+    // i = 0     2                                  2       
+    // i = 1     x                                  2, x
+    // i = 2     *                  *               2, x, 
+    // i = 3     +                  +               2. x. *.
+    // i = 4     1                  +               2, x, *, 1, +  
+    // result = + 1 * x 2                                                                                                           // set the index of the expression string to 0  
     while(expression[i] != '\0'){                                                                   // loop through each character in the expression until the null terminator is reached
         if(isOperand(expression[i])){                                                               // if the character is an operand
             if (isdigit(expression[i])){                                                            // if the operand is a digit (not a variable)
@@ -93,9 +100,7 @@ Stack infixToPosfix(char *expression){
     return reverse(postfix);                                                                        // return the reversed postfix stack since the postfix expression is generated in reverse order
 }
 
-// create reverse postfix
-                                                                                                    
-                                                                                                    // reference: https://youtu.be/u3paQa8KXu0?si=ndznaZU_UoRsGmy2
+// create reverse postfix                                                                                             // reference: https://youtu.be/u3paQa8KXu0?si=ndznaZU_UoRsGmy2
 int evaluate(Expression expr){                              
     Stack postfix = expr.postfix;                                                                   // get the postfix expression from the Expression struct 
     Stack stack = createStack();                                                                    // create a new stack to hold the values of the postfix expression 
